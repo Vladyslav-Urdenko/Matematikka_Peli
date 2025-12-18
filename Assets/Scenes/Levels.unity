@@ -3165,8 +3165,8 @@ MonoBehaviour:
     Valitse nyt tasosi ja aloitetaan uuden maailman tutkiminen.'
   warningText: "Hei, \xE4l\xE4 nuku!!"
   letterDelay: 0.05
-  warningAfterSeconds: 10
-  hideAfterSeconds: 15
+  warningAfterSeconds: 8
+  hideAfterSeconds: 60
 --- !u!1 &855915177
 GameObject:
   m_ObjectHideFlags: 0
