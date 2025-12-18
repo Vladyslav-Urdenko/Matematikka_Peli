@@ -3,6 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class LevelSelectionManager : MonoBehaviour
 {
+    public static int currentLevel;
+
+    public void selectLevel(int levelNum)
+    {
+        currentLevel = levelNum;
+        SceneManager.LoadScene(levelNum);
+    }
     public void LoadSampleScene()
     {
         SceneManager.LoadScene(0);
