@@ -354,6 +354,7 @@ RectTransform:
   - {fileID: 1521917342}
   - {fileID: 987647328}
   - {fileID: 756572815}
+  - {fileID: 1176923400}
   - {fileID: 1692621009}
   - {fileID: 1585493988}
   - {fileID: 1845668006}
@@ -416,12 +417,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   questions:
-  - questionText: Onko 2 + 2 = 4?
+  - questionText: "Onko 1 jaollinen vain itsell\xE4\xE4n ja ykk\xF6sell\xE4?"
     isTrue: 1
-  - questionText: Onko 5 suurempi kuin 3?Onko 5 suurempi kuin 3?
-    isTrue: 1
-  - questionText: Onko 10 pienempi kuin 7?
+  - questionText: "Onko \xE4\xE4ret\xF6n desimaaliluku aina irrationaalinen?"
     isTrue: 0
+  - questionText: Onko log(10, 1) = 0?
+    isTrue: 1
   questionTextG: {fileID: 756572816}
   trueAnswerText: {fileID: 987647326}
   falseAnswerText: {fileID: 1521917340}
@@ -472,15 +473,15 @@ RectTransform:
   m_GameObject: {fileID: 756572814}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.6959996, y: 2.2348557, z: 1}
+  m_LocalScale: {x: 2.6959996, y: 1.7736949, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 639234915}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3.9996033, y: 122.00224}
-  m_SizeDelta: {x: -569.425, y: -333.38}
+  m_AnchoredPosition: {x: 3.9996338, y: 121.83594}
+  m_SizeDelta: {x: -569.425, y: -333.04828}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &756572816
 MonoBehaviour:
@@ -1130,6 +1131,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1109366972}
+  m_CullTransparentMesh: 1
+--- !u!1 &1176923399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1176923400}
+  - component: {fileID: 1176923402}
+  - component: {fileID: 1176923401}
+  m_Layer: 5
+  m_Name: Panel (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1176923400
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176923399}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.37, y: 0.35, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 639234915}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 4, y: -63}
+  m_SizeDelta: {x: -615.54, y: 185.57}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1176923401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176923399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.7509433, g: 0.41875324, b: 0.19694544, a: 0.7607843}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1176923402
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176923399}
   m_CullTransparentMesh: 1
 --- !u!1 &1246264563
 GameObject:

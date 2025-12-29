@@ -416,11 +416,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   questions:
-  - questionText: Onko 2 + 2 = 4?
+  - questionText: Onko 7 alkuluku?
     isTrue: 1
-  - questionText: Onko 5 suurempi kuin 3?Onko 5 suurempi kuin 3?
+  - questionText: Onko 100 jaollinen luvulla 4?
     isTrue: 1
-  - questionText: Onko 10 pienempi kuin 7?
+  - questionText: Onko 2 irrationaalinen luku?
     isTrue: 0
   questionTextG: {fileID: 756572816}
   trueAnswerText: {fileID: 987647326}
@@ -472,15 +472,15 @@ RectTransform:
   m_GameObject: {fileID: 756572814}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.6959996, y: 2.2348557, z: 1}
+  m_LocalScale: {x: 2.6959996, y: 1.7736949, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 639234915}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3.9996033, y: 122.00224}
-  m_SizeDelta: {x: -569.425, y: -333.38}
+  m_AnchoredPosition: {x: 3.9996033, y: 121.835945}
+  m_SizeDelta: {x: -569.425, y: -333.04828}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &756572816
 MonoBehaviour:

@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 15003, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: iOS
+  m_EditorClassIdentifier: UnityEditor.dll::UnityEditor.Build.Profile.BuildProfile
+  m_AssetVersion: 1
+  m_BuildTarget: 9
+  m_Subtarget: 0
+  m_PlatformId: ad48d16a66894befa4d8181998c3cb09
+  m_PlatformBuildProfile:
+    rid: -2
+  m_OverrideGlobalSceneList: 1
+  m_Scenes:
+  - m_enabled: 1
+    m_path: Assets/Scenes/SampleScene.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Levels.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Level1.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Level1 2.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Level1 3.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Level1 4.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Level1 5.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Level1 6.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Level1 7.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Level1 8.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Level1 9.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Level1 10.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Level1 11.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Level1 12.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Level1 13.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Level1 14.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Level1 15.unity
+  m_HasScriptingDefines: 0
+  m_ScriptingDefines: []
+  m_PlayerSettingsYaml:
+    m_Settings: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+--- !u!114 &3805847408405628888
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 15010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: Quality Settings
+  m_EditorClassIdentifier: UnityEditor.dll::UnityEditor.Build.Profile.BuildProfileQualitySettings
+  m_DefaultQualityLevel: Medium
+  m_QualityLevels:
+  - Very Low
+  - Low
+  - Medium
+  - High
+  - Very High
+  - Ultra
+--- !u!114 &6571716467718570705
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 15012, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: BuildAutomationSettings
+  m_EditorClassIdentifier: UnityEditor.dll::UnityEditor.Build.Profile.BuildAutomationSettings
+  m_OperatingSystemValue: sonomaSilicon
+  m_OperatingSystemFamily: mac
+  m_XcodeVersion: default
+  m_AndroidSdkVersion: android_sdk_35
+  m_UnityArchitecture: AppleSilicon
+  m_MachineTypeId: orka_standard_v1
+  m_CredentialsId: 
+  m_BuildTarget: 9
