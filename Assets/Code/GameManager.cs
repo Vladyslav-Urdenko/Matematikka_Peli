@@ -25,7 +25,17 @@ public class GameManager : MonoBehaviour
     private Animator animator;
 
     [SerializeField]
-    private float timeBetweenQuestions = 1f;    
+
+    private float timeBetweenQuestions = 1f;
+
+    [Header("Progress")]
+    [SerializeField] private int questionsPerLevel = 3;
+    private static int answeredCount = 0;
+
+    [Header("UI")]
+    [SerializeField] private GameObject continueMenu;
+
+    [SerializeField] private GameObject hideMenu;
     void Start()
     {
         if(unansweredQuestions == null || unansweredQuestions.Count == 0)
@@ -61,8 +71,17 @@ public class GameManager : MonoBehaviour
     IEnumerator TransitionToNextQuestion()
     {
         unansweredQuestions.Remove(currentQuestion);
+        answeredCount++;
         yield return new WaitForSeconds(timeBetweenQuestions);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if (answeredCount >= questionsPerLevel)
+        {
+            continueMenu.SetActive(true);
+            hideMenu.SetActive(false);
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     public void UserSelectTrue()
@@ -91,5 +110,21 @@ public class GameManager : MonoBehaviour
             Debug.Log("Wrong");
         }
         StartCoroutine(TransitionToNextQuestion());
+    }
+
+    public void LoadNextLevel()
+    {
+        answeredCount = 0;
+        unansweredQuestions = null;
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void BackToLevelSelect()
+    {
+        answeredCount = 0;
+        unansweredQuestions = null;
+
+        SceneManager.LoadScene(1); // Level selection menu
     }
 }
