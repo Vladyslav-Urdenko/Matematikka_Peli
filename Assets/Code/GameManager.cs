@@ -36,6 +36,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject continueMenu;
 
     [SerializeField] private GameObject hideMenu;
+
+    private static int correctAnswers = 0;
     void Start()
     {
         if(unansweredQuestions == null || unansweredQuestions.Count == 0)
@@ -77,6 +79,9 @@ public class GameManager : MonoBehaviour
         {
             continueMenu.SetActive(true);
             hideMenu.SetActive(false);
+            //int levelIndex = SceneManager.GetActiveScene().buildIndex;
+            //PlayerPrefs.SetInt("Level_Stars_" + levelIndex, correctAnswers);
+            SaveStars();
         }
         else
         {
@@ -90,6 +95,7 @@ public class GameManager : MonoBehaviour
         if (currentQuestion.isTrue)
         {
             Debug.Log("Correct");
+            correctAnswers++;
         }
         else
         {
@@ -104,6 +110,7 @@ public class GameManager : MonoBehaviour
         if (!currentQuestion.isTrue)
         {
             Debug.Log("Correct");
+            correctAnswers++;
         }
         else
         {
@@ -115,6 +122,7 @@ public class GameManager : MonoBehaviour
     public void LoadNextLevel()
     {
         answeredCount = 0;
+        correctAnswers = 0;
         unansweredQuestions = null;
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -123,8 +131,25 @@ public class GameManager : MonoBehaviour
     public void BackToLevelSelect()
     {
         answeredCount = 0;
+        correctAnswers = 0;
         unansweredQuestions = null;
 
-        SceneManager.LoadScene(1); // Level selection menu
+        SceneManager.LoadScene(1);
     }
+
+    void SaveStars()
+    {
+        int levelIndex = SceneManager.GetActiveScene().buildIndex;
+        string key = "Level_Stars_" + levelIndex;
+
+        int previousStars = PlayerPrefs.GetInt(key, 0);
+
+        if (correctAnswers > previousStars)
+        {
+            PlayerPrefs.SetInt(key, correctAnswers);
+            PlayerPrefs.Save();
+        }
+    }
+
+
 }
